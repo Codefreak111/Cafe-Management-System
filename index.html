@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url(https://fonts.googleapis.com/css2?family=poppins);
+
+        * {
+            background-color: rgb(228, 223, 214);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Montserrat;
+        }
+
+        .signUpContainer {
+            display: block;
+            text-align: center;
+            margin-top: 300px;
+        }
+
+        .login {
+            margin-left: 100px;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 99;
+        }
+
+        .login-button {
+            padding: 5px;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+
+        .login-button:hover {
+            cursor: pointer;
+        }
+
+        .nav {
+            font-size: large;
+        }
+
+        .header .logo {
+            font-size: 1.7em;
+            color: rgb(225, 140, 37);
+            text-decoration: none;
+        }
+
+        .nav a {
+            position: relative;
+            font-size: 1.1em;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            margin-left: 40px;
+        }
+
+        .nav a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 3px;
+            background: rgb(108, 118, 126);
+            border-radius: 5px;
+            transform: scaleX(0);
+            transition: 0.5s;
+        }
+
+        .nav a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .content > p {
+            color: #71412a;
+        }
+
+        .home {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: url(cup-coffee-with-pile-coffee-beans_1112-438.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 80px 20px;
+        }
+
+        .home .content {
+            max-width: 600px;
+            color: aliceblue;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .home .login {
+            position: relative;
+            width: 100%;
+            max-width: 440px;
+            flex: 1;
+        }
+
+        h2 {
+            color: #1e0b04;
+        }
+
+        .login h2 {
+            font-size: 2em;
+            color: rgb(162, 105, 20);
+            text-align: center;
+        }
+
+        .input {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            margin: 40px 0px;
+        }
+
+        .input input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: 1px solid rgb(210, 132, 29);
+            outline: none;
+            border-radius: 40px;
+            font-size: 1em;
+            color: rgb(50, 63, 75);
+            padding: 0 25px 0 45px;
+        }
+
+        .remebrforget {
+            font-size: 0.9em;
+            display: flex;
+            justify-content: space-between;
+            margin-top: -25px;
+        }
+
+        .login .btn {
+            width: 100%;
+            height: 50px;
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            background: linear-gradient(90deg, #1e0b04, #71412a);
+            box-shadow: 0 8px 10px rgba(0, 0, 0, .5);
+            cursor: pointer;
+            font-size: 1em;
+            color: aliceblue;
+            font-weight: 500;
+        }
+
+        /* Responsiveness */
+        @media screen and (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                padding: 10px 20px;
+            }
+
+            .nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            .nav a {
+                margin-left: 10px;
+            }
+
+            .home {
+                flex-direction: column;
+                padding: 20px;
+                height: auto;
+            }
+
+            .home .content, .home .login {
+                width: 100%;
+                max-width: none;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .header .logo {
+                font-size: 1.2em;
+            }
+
+            .nav a {
+                font-size: 0.9em;
+                margin-left: 5px;
+            }
+
+            .content h2 {
+                font-size: 1.8em;
+            }
+
+            .content p {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@290&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafeverse Login</title>
+</head>
+<body>
+    <header class="header anim">
+        <a href="./Frontpage.html" class="logo">
+            <ion-icon name="cafe-sharp"></ion-icon>CafeVerse
+        </a>
+        <nav class="nav anim">
+            <a href="./Frontpage.html">Home</a>
+            <a href="#">Store</a>
+            <a href="#">Order</a>
+            <a href="#">Pay</a>
+            <a href="#">Sign-in</a>
+        </nav>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+    </header>
+    <section class="home ">
+        <div class="content anim">
+            <h2>Coffee Build Your Mind</h2>
+            <p>"Step into the World of Flavors, Just One Click Away.
+                Reconnect with the Aroma of Freshly Brewed Coffee.
+                Log in to Manage Your Cafe Experience Effortlessly.
+                Sip, Relax, and Enjoy—Your Coffee Adventure Awaits!"</p>
+            <a class="get-started" href="#">Get Started</a>
+        </div>
+        <div class="login anim">
+            <h2>Member Login</h2>
+           
+
+    <div class="input anim">
+        <span class="icon"><ion-icon name="mail-sharp"></ion-icon></span>
+        <input type="email" required>
+        <label>Enter Your Email</label>
+    </div>
+
+    <div class="input2 anim" ></div>
+        <span class="icon"><ion-icon name="lock-closed-sharp"></ion-icon></span>
+        <input class="pass-word" type="password" placeholder="Enter Your Password"></input>
+    </div>
+
+    <div class="remebrforget anim">
+
+        <!-- <div class="signUpContainer">
+        <label><input class="check" type="checkbox">Remember Me</label>
+        <a class="forget"   href="#">Forget Password</a>
+        <button class="login-button" type="submit" class="btn">Login</button>
+        <div class="registerlink">
+            <p>Not a Member?? <a href="#">Sign Up Now</a></p> -->
+
+        </div>
+        </div>
+    </div>
+
+        
+        </div>
+    </section>
+
+
+    
+
+</body>
+</html>
